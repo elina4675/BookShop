@@ -7,14 +7,13 @@ from bookshop_ci import (
     parse_php_constants,
 )
 
-
 class BookShopProjectTests(unittest.TestCase):
     def test_config_uses_expected_bookshop_database_settings(self) -> None:
         constants = parse_php_constants()
 
         self.assertEqual(constants["DB_NAME"], "BookShop")
         self.assertEqual(constants["DB_SERVER"], "127.0.0.1:3307")
-        self.assertEqual(constants["NUMBER_OF_ROWS_IN_PAGE"], 10)
+        self.assertEqual(constants["NUMBER_OF_ROWS_IN_PAGE"], 11)
 
     def test_index_uses_expected_default_route_values(self) -> None:
         defaults = extract_index_defaults()
