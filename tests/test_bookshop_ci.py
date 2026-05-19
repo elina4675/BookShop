@@ -13,7 +13,7 @@ class BookShopProjectTests(unittest.TestCase):
 
         self.assertEqual(constants["DB_NAME"], "BookShop")
         self.assertEqual(constants["DB_SERVER"], "127.0.0.1:3307")
-        self.assertEqual(constants["NUMBER_OF_ROWS_IN_PAGE"], 11)
+        self.assertEqual(constants["NUMBER_OF_ROWS_IN_PAGE"], 10)
 
     def test_index_uses_expected_default_route_values(self) -> None:
         defaults = extract_index_defaults()
